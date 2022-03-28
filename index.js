@@ -1,4 +1,4 @@
-console.log('Hello there');
+// console.log('Hello there');
 
 // FUNCTIONS
 // const printMessage = _ => console.log('hello');
@@ -53,10 +53,41 @@ Multiple line comments
 // }
 // console.log(getNumberSign(0));
 
-const isValidLength = (phoneNumber) => {
-  const validLength = 10;
-  if (phoneNumber.length === validLength) return true;
-  else return false;
+// const isValidLength = (phoneNumber) => {
+//   const validLength = 10;
+//   if (phoneNumber.length === validLength) return true;
+//   else return false;
+// }
+
+// console.log(isValidLength('1234567891'));
+
+
+// Passing functions into functions
+// const notifyByEmail = (email) => {
+//   return `Email sent to ${email}`;
+// }
+
+// const notifyByText = (phoneNumber) => {
+//   return `Text sent to ${phoneNumber};`
+// }
+
+// const notify = (contact) => {
+//   return contact;
+// }
+
+// console.log(notify(notifyByEmail('sam@example.com')));
+// console.log(notify(notifyByText('123456780')));
+
+const notifyByEmail = (email) => {
+  return `Email sent to ${email}`;
 }
 
-console.log(isValidLength('1234567891'));
+const notifyByText = (phoneNumber) => {
+  return `Text sent to ${phoneNumber};`
+}
+
+const notify = (emailOrPhone, notifyFunction) => {
+  return notifyFunction(emailOrPhone);
+}
+
+console.log(notify('sam@example.com', notifyByEmail));
