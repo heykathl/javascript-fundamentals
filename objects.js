@@ -36,4 +36,6 @@ const generateMessages = (namesAndDiscounts) => {
 
 console.log(generateMessages(namesAndDiscounts));
 
-module.exports = {generateMessages};
+module.exports = {
+  generateMessages
+};
