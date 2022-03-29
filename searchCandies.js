@@ -15,13 +15,22 @@ const searchCandies = (letters, price) => {
     { name: 'Fraise Tagada', price: 5.99 }
   ]
     .filter(item => item.price <= price )
-    .filter(item => item.name.startsWith(letters))
+    .filter(item => item.name.toLowerCase().startsWith(letters.toLowerCase()))
     .map(item => {
       return item.name
     })
 }
 
 console.log(searchCandies('Ma', 4));
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const isEvenNumber = (number) => {
+  return number % 2 === 0;
+}
+
+const evenNumbers = numbers.filter(item => isEvenNumber(item));
+console.log(evenNumbers);
 
 module.exports = {
   searchCandies
