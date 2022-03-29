@@ -17,8 +17,8 @@ const fizzBuzz = (number) => {
     else return number;
   }
 
-for (let i = 1; i <= 50; i++){
-  console.log(`FizzBuzz result for ${i} is ${fizzBuzz(i)}`)
-};
+// for (let i = 1; i <= 50; i++){
+//   console.log(`FizzBuzz result for ${i} is ${fizzBuzz(i)}`)
+// };
 
 module.exports = fizzBuzz;
