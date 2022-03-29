@@ -17,6 +17,12 @@ const arrays = {
 
     // Using Filter
     return phoneNumbers.filter(this.checkLength)
+  },
+
+  generateMessages: function(names) {
+    return names.map(name => {
+      return `Hi ${name}! 50% off our best candies for you today!`
+    });
   }
 };
 

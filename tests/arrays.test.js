@@ -26,4 +26,16 @@ describe('arrays', () => {
   test('returns an empty array when no values given', () => {
     expect(array.filterLongNumber([])).toEqual([]);
   });
+
+  test('returns a message for a given name', () => {
+    expect(array.generateMessages(['Jim'])).toEqual(['Hi Jim! 50% off our best candies for you today!']);
+  });
+
+  test('returns messages for given names', () => {
+    expect(array.generateMessages(['Jim', 'John', 'Jeremy'])).toEqual([
+      'Hi Jim! 50% off our best candies for you today!',
+      'Hi John! 50% off our best candies for you today!',
+      'Hi Jeremy! 50% off our best candies for you today!'
+    ]);
+  });
 })
